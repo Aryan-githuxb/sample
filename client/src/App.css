@@ -1,0 +1,72 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Form Styling */
+.form-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  width: 95%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar: Pushes content to edges */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end; /* Push items to the right */
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  width: auto;
+  padding: 5px 15px;
+}
+
+/* Big Centered Text */
+.center-content {
+  flex-grow: 1; /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-content h1 {
+  font-size: 5rem;
+  color: #28a745;
+}
