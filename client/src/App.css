@@ -1,11 +1,9 @@
-/* Reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
 
-/* Form Styling */
 .form-container {
   width: 300px;
   margin: 100px auto;
@@ -34,20 +32,18 @@ button {
   cursor: pointer;
 }
 
-/* Dashboard Layout */
 .dashboard-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Navbar: Pushes content to edges */
 .navbar {
   background-color: #333;
   color: white;
   padding: 15px;
   display: flex;
-  justify-content: flex-end; /* Push items to the right */
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
 }
@@ -58,9 +54,8 @@ button {
   padding: 5px 15px;
 }
 
-/* Big Centered Text */
 .center-content {
-  flex-grow: 1; /* Takes up remaining space */
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;

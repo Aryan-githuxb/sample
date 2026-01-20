@@ -10,10 +10,6 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      // Data Flow: 
-      // 1. Frontend gathers data (username, password)
-      // 2. Axios sends it to Backend (server/routes/auth.js)
-      // 3. Backend hashes password and saves to MongoDB
       await axios.post('http://localhost:5000/auth/signup', { 
         username, 
         password 
@@ -21,10 +17,8 @@ const Signup = () => {
 
       alert('Signup Successful! Please Login.');
       
-      // Logic: After successful signup, move user to Login page
       navigate('/login');
     } catch (err) {
-      // Logic: If username exists or server fails
       console.error(err);
       alert('Error signing up (Username might be taken)');
     }

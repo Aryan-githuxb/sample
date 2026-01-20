@@ -7,7 +7,6 @@ import './App.css';
 
 function App() {
   return (
-    // Wrap app in AuthProvider so all components can access 'user' state
     <AuthProvider>
       <Router>
         <Routes>
@@ -16,8 +15,6 @@ function App() {
           <Route 
             path="/dashboard" 
             element={
-              // Logic: Protected Route. We will create a wrapper inside Dashboard usually, 
-              // but here we check Context directly in the component for simplicity.
               <Dashboard />
             } 
           />

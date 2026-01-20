@@ -6,19 +6,16 @@ import { AuthContext } from '../context/AuthContext';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useContext(AuthContext); // Access global login function
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Stop page from refreshing
+    e.preventDefault();
     try {
-      // Data Flow: Send POST request to our Backend API
       const res = await axios.post('http://localhost:5000/auth/login', { username, password });
       
-      // If success, update global state
       login({ username: res.data.username }, res.data.token);
       
-      // Redirect to Dashboard
       navigate('/dashboard');
     } catch (err) {
       alert('Invalid Credentials');
